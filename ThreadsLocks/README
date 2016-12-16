@@ -6,3 +6,7 @@ To build and run, change into the directory of the project and:
 
     mvn compile
     mvn exec:java
+
+TODO how to `exec:java` in InteliJ IDEA?
+
+dumb method: see README.md

@@ -10,6 +10,7 @@ package com.paulbutcher;
 
 import java.util.Random;
 
+@SuppressWarnings("Duplicates")
 class Philosopher extends Thread {
   private Chopstick first, second;
   private Random random;

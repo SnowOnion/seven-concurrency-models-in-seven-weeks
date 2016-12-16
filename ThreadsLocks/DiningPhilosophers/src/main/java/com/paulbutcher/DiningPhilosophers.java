@@ -8,6 +8,7 @@
 ***/
 package com.paulbutcher;
 
+@SuppressWarnings("Duplicates") // 避免一堆黄色波浪线
 public class DiningPhilosophers {
 
   public static void main(String[] args) throws InterruptedException {
@@ -21,6 +22,6 @@ public class DiningPhilosophers {
       philosophers[i].start();
     }
     for (int i = 0; i < 5; ++i)
-      philosophers[i].join();
+      philosophers[i].join(); // 到得了么……
   }
 }

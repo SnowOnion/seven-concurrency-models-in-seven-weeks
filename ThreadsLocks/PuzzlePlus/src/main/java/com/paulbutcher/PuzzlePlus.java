@@ -8,7 +8,7 @@
  ***/
 package com.paulbutcher;
 
-public class Puzzle {
+public class PuzzlePlus {
 
     static boolean answerReady = false;
     static int answer = 0;
@@ -22,11 +22,14 @@ public class Puzzle {
 
     static Thread t2 = new Thread() {
         public void run() {
-            // 没试出来过 The meaning of life is: 0……指令重排太难触发了吧
-            if (answerReady)
-                System.out.println("The meaning of life is: " + answer);
-            else
-                System.out.println("I don't know the answer");
+            // 不理解书上说的这个 内存可见性 例子
+            while (!answerReady)
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            System.out.println("The meaning of life is: " + answer);
         }
     };
 
